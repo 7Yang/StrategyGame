@@ -1,0 +1,67 @@
+// version:1
+// update the above any time a change is made to this file
+
+// deal with some devices which need safe zone
+// Order is: Left, Top, Right, Bottom
+// Samsung S8
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SM\-G950")), (SafeZone_Landscape="15,20,15,15")
+// Samsung S8+
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SM\-G955")), (SafeZone_Landscape="15,20,15,15")
+// Samsung S9
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SM\-G960")), (SafeZone_Landscape="15,20,15,15")
+// Samsung S9+
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SM\-G965")), (SafeZone_Landscape="15,20,15,15")
+// Google Pixel 2 XL
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="Google"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="Pixel 2 XL")), (SafeZone_Landscape="15,20,15,15")
+// Google Pixel 3
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="Google"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="Pixel 3")), (SafeZone_Landscape="15,20,15,15")
+// Google Pixel 3 XL (notch)
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="Google"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="Pixel 3 XL")), (SafeZone_Landscape="15,20,15,15")
+// Google Pixel 3a
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="Google"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="Pixel 3a")), (SafeZone_Landscape="15,20,15,15")
+// Nokia 8.1
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HMD Global"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="Nokia 8.1")), (SafeZone_Landscape="15,20,15,15")
+
+// Samsung S10e
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SM\-G970")), (SafeZone_Landscape="65,20,65,15")
+// Samsung S10
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SM\-G973")), (SafeZone_Landscape="65,20,65,15")
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SC\-03L")), (SafeZone_Landscape="65,20,65,15")
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SCV41")), (SafeZone_Landscape="65,20,65,15")
+// Samsung S10+
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SM\-G975")), (SafeZone_Landscape="65,20,65,15")
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SC\-04L")), (SafeZone_Landscape="65,20,65,15")
+condition:((SourceType=sammodel,CompareType=CMP_Regex,MatchString="SCV42")), (SafeZone_Landscape="65,20,65,15")
+
+// safe zone and bump the memory bucket rounding
+// HUAWEI Mate 20X
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="EVR\-[AT]L00")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="EVR\-L29")), (SafeZone_Landscape="45,20,45,15")
+// HUAWEI Mate 20Pro
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="LYA\-AL[01]0")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="LYA\-TL00")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="LYA\-L[02]9")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="LYA\-AL00P")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="LYA\-L0C")), (SafeZone_Landscape="45,20,45,15")
+// HUAWEI Mate 20
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="HMA\-[AT]L00")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="HMA\-L[02]9")), (SafeZone_Landscape="45,20,45,15")
+// HUAWEI HONOR View20
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="PCT\-L29")), (SafeZone_Landscape="60,20,60,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="PCT\-AL10")), (SafeZone_Landscape="60,20,60,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="PCT\-TL10")), (SafeZone_Landscape="60,20,60,15")
+// HUAWEI P30
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="ELE\-[AT]L00")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="ELE\-L[02]9")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="ELE\-L04")), (SafeZone_Landscape="45,20,45,15")
+// HUAWEI P30 Pro
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="VOG\-[AT]L00")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="VOG\-L[02]9")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="VOG\-L0[4J]")), (SafeZone_Landscape="45,20,45,15")
+condition:((SourceType=SRC_DeviceMake,CompareType=CMP_Equal,MatchString="HUAWEI"),(SourceType=SRC_DeviceModel,CompareType=CMP_Regex,MatchString="HW-02L")), (SafeZone_Landscape="45,20,45,15")
+
+// uncomment to dump all variables for debugging
+//set:(dumpvars=1)
+
+// for now reset the Profile so it uses what is in DefaultDeviceProfiles.ini instead (verify dumpvars above)
+clear:(Profile)
